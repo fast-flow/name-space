@@ -1,0 +1,31 @@
+{
+  "name": "name-space",
+  "version": "0.1.0",
+  "description": "namespace `ns.set(obj, 'user.name', 'nimo')` `ns.get(obj, 'user.name')` // \"nimo\" or undefined",
+  "main": "index.js",
+  "scripts": {
+    "test:ci": "./node_modules/mocha/bin/mocha ./test",
+    "test": "./node_modules/mocha/bin/mocha -w ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fast-flow/name-space.git"
+  },
+  "keywords": [
+    "namespace",
+    "safe",
+    "value"
+  ],
+  "author": "NimoChu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fast-flow/name-space/issues"
+  },
+  "homepage": "https://github.com/fast-flow/name-space#readme",
+  "dependencies": {
+    "extend": "^3.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
+}
