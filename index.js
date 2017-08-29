@@ -23,23 +23,23 @@ module.exports = {
         var lastName = names[names.length - 1]
         names.forEach(function (name, index) {
             var type = typeof tempObj[name]
-            switch(type) {
-                case 'undefined':
-                    if (index === names.length - 1) {
-                        tempObj[name] = value
-                    }
-                    else {
+            if (index === names.length - 1) {
+                tempObj[name] = value
+            }
+            else {
+                switch(type) {
+                    case 'undefined':
+                            tempObj[name] = {}
+                    break
+                    case 'object':
+                        if (tempObj[name] === null) {
+                            tempObj[name] = {}
+                        }
+                    break
+                    default:
                         tempObj[name] = {}
-                    }
-                break
-                case 'object':
-                    if (tempObj[name] === null) {
-                        tempObj[name] = {}
-                    }
-                break
-                default:
-                    tempObj[name] = {}
-                    console.log('node_modules/name-space: set(obj, "' + names.join('.') + '", value); obj.' + names.slice(0, index).join('.') + ' is a ' + type + '\n\r' + 'This value will be replaced by the object')
+                        console.log('node_modules/name-space: set(obj, "' + names.join('.') + '", value); obj.' + names.slice(0, index).join('.') + ' is a ' + type + '\n\r' + 'This value will be replaced by the object')
+                }
             }
             tempObj = tempObj[name]
         })

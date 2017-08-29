@@ -9,6 +9,16 @@ describe('set.js', function() {
             "f2e"
         )
     })
+    it('level 1 has string', function () {
+        var obj = {
+            title: 'abc'
+        }
+        ns.set(obj,'title', 'f2e')
+        assert.equal(
+            obj.title,
+            "f2e"
+        )
+    })
     it('level 2', function () {
         var obj = {}
         ns.set(obj,'name.title', 'f2e')
@@ -37,7 +47,7 @@ describe('set.js', function() {
             '{"user":{"title":"f2e","name":{"lastName":"Chu"}}}'
         )
     })
-    it('level 3 has string', function () {
+    it('level 3 has string 1', function () {
         var obj = {
             user: {
                 title: 'f2e'
@@ -47,6 +57,18 @@ describe('set.js', function() {
         assert.equal(
             JSON.stringify(obj),
             '{"user":{"title":{"subTitle":"abc"}}}'
+        )
+    })
+    it('level 3 has string 2', function () {
+        var obj = {
+            user: {
+                title: 'f2e'
+            }
+        }
+        ns.set(obj,'user.title', 'abc')
+        assert.equal(
+            JSON.stringify(obj),
+            '{"user":{"title":"abc"}}'
         )
     })
     it('level 3 has number', function () {
