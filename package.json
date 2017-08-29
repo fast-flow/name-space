@@ -1,6 +1,6 @@
 {
   "name": "name-space",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "namespace `ns.set(obj, 'user.name', 'nimo')` `ns.get(obj, 'user.name')` // \"nimo\" or undefined",
   "main": "index.js",
   "scripts": {
