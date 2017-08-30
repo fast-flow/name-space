@@ -2,8 +2,8 @@
 
 > namespace set get
 
-[![NPM version](https://img.shields.io/npm/v/paging.svg?style=flat)](https://npmjs.org/package/name-space)
-[![NPM downloads](http://img.shields.io/npm/dm/paging.svg?style=flat)](https://npmjs.org/package/name-space)
+[![NPM version](https://img.shields.io/npm/v/name-space.svg?style=flat)](https://npmjs.org/package/name-space)
+[![NPM downloads](http://img.shields.io/npm/dm/name-space.svg?style=flat)](https://npmjs.org/package/name-space)
 
 
 ## Install
